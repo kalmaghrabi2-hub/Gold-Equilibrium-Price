@@ -1,10 +1,10 @@
 {
-  "generated_at_utc": "2026-09-14T13:32:54.377581+00:00",
+  "generated_at_utc": "2026-09-14T13:33:29.302790+00:00",
   "model": "gold-weekly-benchmark-aware-ridge-v3",
   "frequency": "weekly",
   "forecast_horizon_weeks": 1,
   "target": "GC=F",
-  "target_source": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1262304000&period2=1789392767&interval=1wk&events=history&includeAdjustedClose=true",
+  "target_source": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1262304000&period2=1789392800&interval=1wk&events=history&includeAdjustedClose=true",
   "series": [
     "LAG_GOLD_LOG",
     "DX-Y.NYB",
@@ -13,19 +13,19 @@
     "TIP"
   ],
   "predictor_sources": {
-    "LAG_GOLD_LOG": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1262304000&period2=1789392767&interval=1wk&events=history&includeAdjustedClose=true",
-    "DX-Y.NYB": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1262304000&period2=1789392767&interval=1wk&events=history&includeAdjustedClose=true",
-    "^TNX": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?period1=1262304000&period2=1789392767&interval=1wk&events=history&includeAdjustedClose=true",
-    "^VIX": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1262304000&period2=1789392767&interval=1wk&events=history&includeAdjustedClose=true",
-    "TIP": "https://query1.finance.yahoo.com/v8/finance/chart/TIP?period1=1262304000&period2=1789392767&interval=1wk&events=history&includeAdjustedClose=true"
+    "LAG_GOLD_LOG": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1262304000&period2=1789392800&interval=1wk&events=history&includeAdjustedClose=true",
+    "DX-Y.NYB": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1262304000&period2=1789392800&interval=1wk&events=history&includeAdjustedClose=true",
+    "^TNX": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?period1=1262304000&period2=1789392800&interval=1wk&events=history&includeAdjustedClose=true",
+    "^VIX": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1262304000&period2=1789392800&interval=1wk&events=history&includeAdjustedClose=true",
+    "TIP": "https://query1.finance.yahoo.com/v8/finance/chart/TIP?period1=1262304000&period2=1789392800&interval=1wk&events=history&includeAdjustedClose=true"
   },
   "beta": [
-    7.4156278985759885,
-    0.3517183551434622,
-    0.0011971145066056235,
-    0.0013720682304187405,
-    0.0016069927459189395,
-    -0.000837641809262076
+    7.415628138187403,
+    0.35171920645328947,
+    0.0011969522593363554,
+    0.0013717848361848757,
+    0.001606889176821063,
+    -0.0008381305460031524
   ],
   "means": [
     7.414093039881308,
@@ -78,10 +78,10 @@
     "r2": 0.992,
     "mape_pct": 1.905,
     "accuracy_pct": 98.095,
-    "rmse_usd_oz": 90.097,
+    "rmse_usd_oz": 90.095,
     "naive_mape_pct": 1.905,
     "naive_accuracy_pct": 98.095,
-    "naive_rmse_usd_oz": 90.097,
+    "naive_rmse_usd_oz": 90.095,
     "skill_vs_naive_mse_pct": 0.0,
     "direction_accuracy_pct": 41.15,
     "n_weeks_total": 871,
@@ -91,12 +91,12 @@
   },
   "walk_forward_gate": "PASS",
   "benchmark_gate": "FAIL",
-  "publication_status": "PROVISIONAL",
+  "publication_status": "REFERENCE_ONLY",
   "live": {
     "as_of_week": "2026-09-10",
-    "anchor_usd_oz": 4313.7998,
-    "raw_model_fair_value_usd_oz": 4327.8656,
-    "fair_value_usd_oz": 4313.7998,
+    "anchor_usd_oz": 4314.7002,
+    "raw_model_fair_value_usd_oz": 4328.7863,
+    "fair_value_usd_oz": 4314.7002,
     "predicted_return_pct": 0.0
   },
   "rules": {
@@ -110,6 +110,94 @@
     "naive_benchmark": "persistence: next weekly close equals previous observed weekly close",
     "accuracy_definition": "100 - final out-of-sample MAPE; descriptive only, not a probability",
     "lookahead": "none; predictors and target anchor are from information available before the forecast week",
-    "missing_data": "complete-case only; no imputation"
+    "missing_data": "complete-case only; no imputation",
+    "fit_score_definition": "100 - final OOS MAPE; descriptive fit score only, NOT probability and NOT equilibrium accuracy",
+    "equilibrium_claim_rule": "Near-term forecast cannot by itself validate structural equilibrium; every structural/physical overlay needs separate OOS validation."
+  },
+  "strict_validation": {
+    "generated_at_utc": "2026-09-14T13:33:31.475555+00:00",
+    "checks": {
+      "nonzero_model_weight": false,
+      "min_mse_skill": false,
+      "min_relative_mape_improvement": false,
+      "dm_significance": false,
+      "regime_stability": false,
+      "directional_information": false
+    },
+    "failed_checks": [
+      "nonzero_model_weight",
+      "min_mse_skill",
+      "min_relative_mape_improvement",
+      "dm_significance",
+      "regime_stability",
+      "directional_information"
+    ],
+    "thresholds": {
+      "min_mse_skill_pct": 2.0,
+      "min_relative_mape_improvement_pct": 1.0,
+      "max_dm_p_value": 0.05,
+      "min_positive_52w_windows": 4,
+      "min_direction_accuracy_pct": 52.5
+    },
+    "diagnostics": {
+      "mse_skill_pct": 0.0,
+      "relative_mape_improvement_pct": 0.0,
+      "direction_accuracy_pct": 41.15,
+      "dm_stat": 0.0,
+      "dm_one_sided_p_value": 1.0,
+      "positive_52w_windows": 0,
+      "windows": [
+        {
+          "start": "2021-09-23",
+          "end": "2022-09-15",
+          "skill_mse_pct": 0.0,
+          "positive": false
+        },
+        {
+          "start": "2022-09-22",
+          "end": "2023-09-14",
+          "skill_mse_pct": 0.0,
+          "positive": false
+        },
+        {
+          "start": "2023-09-21",
+          "end": "2024-09-12",
+          "skill_mse_pct": 0.0,
+          "positive": false
+        },
+        {
+          "start": "2024-09-19",
+          "end": "2025-09-11",
+          "skill_mse_pct": 0.0,
+          "positive": false
+        },
+        {
+          "start": "2025-09-18",
+          "end": "2026-09-10",
+          "skill_mse_pct": 0.0,
+          "positive": false
+        }
+      ]
+    }
+  },
+  "strict_publication_gate": "FAIL",
+  "uncertainty": {
+    "method": "empirical final-OOS log errors",
+    "candidate_80": [
+      4201.6548,
+      4453.6368
+    ],
+    "candidate_95": [
+      4145.7471,
+      4541.3854
+    ],
+    "persistence_80": [
+      4201.6548,
+      4453.6368
+    ],
+    "persistence_95": [
+      4145.7471,
+      4541.3854
+    ]
   }
 }
