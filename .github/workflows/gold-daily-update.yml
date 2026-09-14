@@ -38,6 +38,10 @@ jobs:
       - name: Calibrate weekly ARX fair-value model
         run: python gold/src/calibrate_gold_weekly_arx.py
 
+      - name: Refresh WGC fundamentals calibration
+        continue-on-error: true
+        run: python gold/src/calibrate_gold_fundamentals.py
+
       - name: Update latest gold equilibrium data
         run: python gold/src/update_gold.py
 
@@ -45,7 +49,7 @@ jobs:
         run: |
           git config user.name "gold-equilibrium-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add docs/gold/data/weekly_calibration.json docs/gold/data/latest.json
+          git add docs/gold/data/weekly_calibration.json docs/gold/data/fundamentals_calibration.json docs/gold/data/latest.json
           if git diff --cached --quiet; then
             echo "No output changes"
           else
