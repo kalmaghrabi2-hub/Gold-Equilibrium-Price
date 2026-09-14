@@ -1,38 +1,38 @@
 {
   "as_of_date": "2026-09-14",
-  "generated_at_utc": "2026-09-14T11:12:40.038503+00:00",
+  "generated_at_utc": "2026-09-14T11:14:05.286685+00:00",
   "model_version": "gold-weekly-arx-wgc-calibrated-v3.0",
   "market": {
-    "usd_oz": 4335.89990234375,
+    "usd_oz": 4336.10009765625,
     "as_of": "2026-09-14",
     "freshness_status": "futures_fallback",
     "provider": "Yahoo GC=F",
-    "source": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1787569960&period2=1789384360&interval=1d&events=history"
+    "source": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1787570045&period2=1789384445&interval=1d&events=history"
   },
   "macro": {
     "DX-Y.NYB": {
       "series": "DX-Y.NYB",
       "date": "2026-09-14",
-      "value": 99.53700256347656,
-      "source": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1787569960&period2=1789384360&interval=1d&events=history"
+      "value": 99.53399658203125,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1787570045&period2=1789384445&interval=1d&events=history"
     },
     "^TNX": {
       "series": "^TNX",
       "date": "2026-09-11",
       "value": 4.974999904632568,
-      "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?period1=1787569960&period2=1789384360&interval=1d&events=history"
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?period1=1787570045&period2=1789384445&interval=1d&events=history"
     },
     "^VIX": {
       "series": "^VIX",
       "date": "2026-09-14",
       "value": 17.610000610351562,
-      "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1787569960&period2=1789384360&interval=1d&events=history"
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1787570045&period2=1789384445&interval=1d&events=history"
     },
     "TIP": {
       "series": "TIP",
       "date": "2026-09-11",
       "value": 105.83999633789062,
-      "source": "https://query1.finance.yahoo.com/v8/finance/chart/TIP?period1=1787569960&period2=1789384360&interval=1d&events=history"
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/TIP?period1=1787570045&period2=1789384445&interval=1d&events=history"
     }
   },
   "fundamentals": {
@@ -54,11 +54,11 @@
     "quarter": "2026-Q2"
   },
   "calibration": {
-    "generated_at_utc": "2026-09-14T11:12:39.942263+00:00",
+    "generated_at_utc": "2026-09-14T11:14:05.214937+00:00",
     "model": "weekly-arx-ridge-v2",
     "frequency": "weekly",
     "target": "GC=F",
-    "target_source": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1262304000&period2=1789384356&interval=1wk&events=history&includeAdjustedClose=true",
+    "target_source": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1262304000&period2=1789384441&interval=1wk&events=history&includeAdjustedClose=true",
     "series": [
       "LAG_GOLD_LOG",
       "DX-Y.NYB",
@@ -67,19 +67,19 @@
       "TIP"
     ],
     "predictor_sources": {
-      "LAG_GOLD_LOG": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1262304000&period2=1789384356&interval=1wk&events=history&includeAdjustedClose=true",
-      "DX-Y.NYB": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1262304000&period2=1789384356&interval=1wk&events=history&includeAdjustedClose=true",
-      "^TNX": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?period1=1262304000&period2=1789384356&interval=1wk&events=history&includeAdjustedClose=true",
-      "^VIX": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1262304000&period2=1789384356&interval=1wk&events=history&includeAdjustedClose=true",
-      "TIP": "https://query1.finance.yahoo.com/v8/finance/chart/TIP?period1=1262304000&period2=1789384356&interval=1wk&events=history&includeAdjustedClose=true"
+      "LAG_GOLD_LOG": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1262304000&period2=1789384441&interval=1wk&events=history&includeAdjustedClose=true",
+      "DX-Y.NYB": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1262304000&period2=1789384441&interval=1wk&events=history&includeAdjustedClose=true",
+      "^TNX": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?period1=1262304000&period2=1789384442&interval=1wk&events=history&includeAdjustedClose=true",
+      "^VIX": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1262304000&period2=1789384442&interval=1wk&events=history&includeAdjustedClose=true",
+      "TIP": "https://query1.finance.yahoo.com/v8/finance/chart/TIP?period1=1262304000&period2=1789384442&interval=1wk&events=history&includeAdjustedClose=true"
     },
     "beta": [
-      7.41563379194362,
-      0.34971878014380375,
-      0.0014527682631733105,
-      0.004015779265254801,
-      0.0020067905044357705,
-      0.0011653274217118276
+      7.415633818447622,
+      0.34971887319097134,
+      0.0014527504409899217,
+      0.004015749765966012,
+      0.0020067792984263476,
+      0.001165274867140062
     ],
     "means": [
       7.414093039881308,
@@ -181,8 +181,8 @@
     }
   },
   "model": {
-    "weekly_fair_value_usd_oz": 4340.71,
-    "macro_fair_value_usd_oz": 4340.71,
+    "weekly_fair_value_usd_oz": 4340.91,
+    "macro_fair_value_usd_oz": 4340.91,
     "physical_overlay": {
       "strategic_demand_share": 0.434392,
       "recycling_share": 0.256994,
@@ -194,8 +194,8 @@
       "status": "CALIBRATED_GATE_FAIL",
       "walk_forward_gate": "FAIL"
     },
-    "fundamental_p_star_usd_oz": 4420.63,
-    "raw_combined_p_star_usd_oz": 4420.63,
+    "fundamental_p_star_usd_oz": 4420.83,
+    "raw_combined_p_star_usd_oz": 4420.83,
     "market_vs_pstar_pct": -1.92,
     "guardrail_active": false,
     "status": "PROVISIONAL",
