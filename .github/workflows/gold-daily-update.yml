@@ -36,6 +36,8 @@ jobs:
         run: python gold/src/collect_institutional_inputs.py
       - name: Research cyclical fair-value candidates
         run: python gold/src/research_cyclical_model.py
+      - name: Research WGC physical price-effect calibration
+        run: python gold/src/calibrate_gold_fundamentals.py
       - name: Calibrate weekly ARX fair-value model
         run: python gold/src/calibrate_gold_weekly_arx.py
       - name: Run independent strict model validation
@@ -59,11 +61,12 @@ jobs:
           cp docs/gold/data/latest.json /tmp/gold-generated/
           cp docs/gold/data/institutional_inputs.json /tmp/gold-generated/
           cp docs/gold/data/cyclical_research.json /tmp/gold-generated/
+          cp docs/gold/data/fundamentals_calibration.json /tmp/gold-generated/
           git fetch origin main
           git reset --hard origin/main
           mkdir -p docs/gold/data
           cp /tmp/gold-generated/*.json docs/gold/data/
-          git add docs/gold/data/weekly_calibration.json docs/gold/data/latest.json docs/gold/data/institutional_inputs.json docs/gold/data/cyclical_research.json
+          git add docs/gold/data/weekly_calibration.json docs/gold/data/latest.json docs/gold/data/institutional_inputs.json docs/gold/data/cyclical_research.json docs/gold/data/fundamentals_calibration.json
           if git diff --cached --quiet; then
             echo "No output changes"
           else
