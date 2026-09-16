@@ -1,11 +1,11 @@
 {
-  "generated_at_utc": "2026-09-16T12:48:00.150144+00:00",
+  "generated_at_utc": "2026-09-16T23:40:55.378304+00:00",
   "model": "gold-cyclical-return-ridge-research-v1",
   "status": "RESEARCH_ONLY",
   "promotion_eligible": false,
   "promotion_blocker": "Historical FRED CSV is current-vintage. ALFRED point-in-time vintages or a sufficiently long committed forward archive are required before publication promotion.",
   "data_sources": {
-    "target": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1262304000&period2=1789562865&interval=1wk&events=history&includeAdjustedClose=true",
+    "target": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1262304000&period2=1789602040&interval=1wk&events=history&includeAdjustedClose=true",
     "DFII10": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII10",
     "DTWEXBGS": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS",
     "VIXCLS": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=VIXCLS",
@@ -35,15 +35,15 @@
     "start": "2021-10-01",
     "end": "2026-09-16",
     "n": 260,
-    "mse": 8394.941571870277,
-    "naive_mse": 8381.032735268313,
-    "mape_pct": 1.9491596414610506,
-    "naive_mape_pct": 1.951682484600326,
-    "mse_skill_pct": -0.165956118312649,
-    "relative_mape_improvement_pct": 0.12926503973785777,
-    "direction_accuracy_pct": 53.07692307692308,
-    "dm_stat": -0.28509847652153497,
-    "dm_one_sided_p_value": 0.6122156514001368,
+    "mse": 8390.58383025075,
+    "naive_mse": 8374.055721446528,
+    "mape_pct": 1.9478132543307116,
+    "naive_mape_pct": 1.9494953645357416,
+    "mse_skill_pct": -0.1973728066066327,
+    "relative_mape_improvement_pct": 0.08628439111115992,
+    "direction_accuracy_pct": 52.69230769230769,
+    "dm_stat": -0.3374805643138453,
+    "dm_one_sided_p_value": 0.6321226694461229,
     "positive_52w_windows": 2,
     "windows": [
       {
@@ -68,7 +68,7 @@
       },
       {
         "window": 5,
-        "mse_skill_pct": -0.2798151796792103,
+        "mse_skill_pct": -0.32055624142475203,
         "positive": false
       }
     ],
