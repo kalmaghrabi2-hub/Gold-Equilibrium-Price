@@ -1,11 +1,11 @@
 {
-  "generated_at_utc": "2026-09-16T12:37:45.800362+00:00",
+  "generated_at_utc": "2026-09-16T12:38:34.815721+00:00",
   "model": "gold-cyclical-return-ridge-research-v1",
   "status": "RESEARCH_ONLY",
   "promotion_eligible": false,
   "promotion_blocker": "Historical FRED CSV is current-vintage. ALFRED point-in-time vintages or a sufficiently long committed forward archive are required before publication promotion.",
   "data_sources": {
-    "target": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1262304000&period2=1789562251&interval=1wk&events=history&includeAdjustedClose=true",
+    "target": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1262304000&period2=1789562303&interval=1wk&events=history&includeAdjustedClose=true",
     "DFII10": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII10",
     "DTWEXBGS": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS",
     "VIXCLS": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=VIXCLS",
@@ -35,15 +35,15 @@
     "start": "2021-10-01",
     "end": "2026-09-16",
     "n": 260,
-    "mse": 8394.975297850846,
-    "naive_mse": 8381.070117930609,
-    "mape_pct": 1.9491683406562013,
-    "naive_mape_pct": 1.9516911742709964,
-    "mse_skill_pct": -0.16591174783859852,
-    "relative_mape_improvement_pct": 0.1292639761891348,
+    "mse": 8394.41307143101,
+    "naive_mse": 8380.445799271303,
+    "mape_pct": 1.9490205701281196,
+    "naive_mape_pct": 1.9515435655323095,
+    "mse_skill_pct": -0.1666650258739466,
+    "relative_mape_improvement_pct": 0.12928204364741894,
     "direction_accuracy_pct": 53.07692307692308,
-    "dm_stat": -0.2850244949605943,
-    "dm_one_sided_p_value": 0.6121873121626802,
+    "dm_stat": -0.2862804526338025,
+    "dm_one_sided_p_value": 0.6126683357876804,
     "positive_52w_windows": 2,
     "windows": [
       {
@@ -68,7 +68,7 @@
       },
       {
         "window": 5,
-        "mse_skill_pct": -0.2797571710287272,
+        "mse_skill_pct": -0.2807418241575821,
         "positive": false
       }
     ],
