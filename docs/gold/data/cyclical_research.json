@@ -1,0 +1,92 @@
+{
+  "generated_at_utc": "2026-09-16T12:34:27.498714+00:00",
+  "model": "gold-cyclical-return-ridge-research-v1",
+  "status": "RESEARCH_ONLY",
+  "promotion_eligible": false,
+  "promotion_blocker": "Historical FRED CSV is current-vintage. ALFRED point-in-time vintages or a sufficiently long committed forward archive are required before publication promotion.",
+  "data_sources": {
+    "target": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1262304000&period2=1789562054&interval=1wk&events=history&includeAdjustedClose=true",
+    "DFII10": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII10",
+    "DTWEXBGS": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS",
+    "VIXCLS": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=VIXCLS",
+    "T10YIE": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=T10YIE"
+  },
+  "selected": {
+    "features": [
+      "RET1",
+      "D_DFII10",
+      "D_DTWEXBGS",
+      "D_VIXCLS",
+      "D_T10YIE"
+    ],
+    "ridge_lambda": 0.5,
+    "model_weight": 0.25,
+    "validation_metrics": {
+      "mse": 1381.640078175985,
+      "naive_mse": 1382.2641214409318,
+      "mape_pct": 1.4957580546914988,
+      "naive_mape_pct": 1.498632499578048,
+      "mse_skill_pct": 0.045146456112610256,
+      "relative_mape_improvement_pct": 0.19180452094549677,
+      "direction_accuracy_pct": 58.97435897435897
+    }
+  },
+  "final_oos": {
+    "start": "2021-10-01",
+    "end": "2026-09-16",
+    "n": 260,
+    "mse": 8394.445407045301,
+    "naive_mse": 8380.48177372985,
+    "mape_pct": 1.9490292332136827,
+    "naive_mape_pct": 1.9515522191329273,
+    "mse_skill_pct": -0.1666208899734345,
+    "relative_mape_improvement_pct": 0.1292809843625687,
+    "direction_accuracy_pct": 53.07692307692308,
+    "dm_stat": -0.28620686545304425,
+    "dm_one_sided_p_value": 0.6126401571380328,
+    "positive_52w_windows": 2,
+    "windows": [
+      {
+        "window": 1,
+        "mse_skill_pct": -2.6530169625232913,
+        "positive": false
+      },
+      {
+        "window": 2,
+        "mse_skill_pct": -0.22815580519777168,
+        "positive": false
+      },
+      {
+        "window": 3,
+        "mse_skill_pct": 0.4889649614264191,
+        "positive": true
+      },
+      {
+        "window": 4,
+        "mse_skill_pct": 0.9953607901850958,
+        "positive": true
+      },
+      {
+        "window": 5,
+        "mse_skill_pct": -0.2806841410020189,
+        "positive": false
+      }
+    ],
+    "checks": {
+      "nonzero_model_weight": true,
+      "min_mse_skill": false,
+      "min_relative_mape_improvement": false,
+      "dm_significance": false,
+      "regime_stability": false,
+      "directional_information": true
+    },
+    "statistical_gate": "FAIL"
+  },
+  "policy": {
+    "final_oos_untouched": true,
+    "selection_window_weeks": 156,
+    "final_oos_weeks": 260,
+    "no_price_clipping": true,
+    "current_published_price_unchanged": true
+  }
+}
