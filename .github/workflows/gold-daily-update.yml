@@ -44,6 +44,8 @@ jobs:
         run: python gold/src/update_gold.py
       - name: Enforce strict publication gate
         run: python gold/src/apply_publication_gate.py
+      - name: Assert data freshness
+        run: python gold/src/assert_data_freshness.py
       - name: Assert economic committee publication contract
         run: python gold/src/assert_publication_contract.py
       - name: Commit refreshed outputs safely
