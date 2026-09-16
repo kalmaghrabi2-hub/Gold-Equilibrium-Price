@@ -46,15 +46,25 @@ jobs:
         run: python gold/src/apply_publication_gate.py
       - name: Assert economic committee publication contract
         run: python gold/src/assert_publication_contract.py
-      - name: Commit refreshed outputs
+      - name: Commit refreshed outputs safely
+        shell: bash
         run: |
+          set -euo pipefail
           git config user.name "gold-equilibrium-bot"
           git config user.email "actions@users.noreply.github.com"
+          mkdir -p /tmp/gold-generated
+          cp docs/gold/data/weekly_calibration.json /tmp/gold-generated/
+          cp docs/gold/data/latest.json /tmp/gold-generated/
+          cp docs/gold/data/institutional_inputs.json /tmp/gold-generated/
+          cp docs/gold/data/cyclical_research.json /tmp/gold-generated/
+          git fetch origin main
+          git reset --hard origin/main
+          mkdir -p docs/gold/data
+          cp /tmp/gold-generated/*.json docs/gold/data/
           git add docs/gold/data/weekly_calibration.json docs/gold/data/latest.json docs/gold/data/institutional_inputs.json docs/gold/data/cyclical_research.json
           if git diff --cached --quiet; then
             echo "No output changes"
           else
             git commit -m "chore(gold): strict-governance daily refresh"
-            git pull --rebase origin main
-            git push origin main
+            git push origin HEAD:main
           fi
