@@ -1,10 +1,10 @@
 {
   "as_of_date": "2026-09-16",
-  "generated_at_utc": "2026-09-16T12:42:44.879158+00:00",
+  "generated_at_utc": "2026-09-16T12:48:32.182337+00:00",
   "model_version": "gold-benchmark-aware-v3.2-no-clipping",
   "market": {
-    "usd_oz": 4344.399902,
-    "as_of": "2026-09-16T12:42:34.861Z",
+    "usd_oz": 4344.5,
+    "as_of": "2026-09-16T12:48:30.328Z",
     "freshness_status": "fresh",
     "provider": "XAUS",
     "source": "https://xaus.com/api/v1/spot"
@@ -13,26 +13,26 @@
     "DX-Y.NYB": {
       "series": "DX-Y.NYB",
       "date": "2026-09-16",
-      "value": 99.70700073242188,
-      "source": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1787748168&period2=1789562568&interval=1d&events=history"
+      "value": 99.71399688720703,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1787748512&period2=1789562912&interval=1d&events=history"
     },
     "^TNX": {
       "series": "^TNX",
       "date": "2026-09-16",
       "value": 4.979000091552734,
-      "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?period1=1787748168&period2=1789562568&interval=1d&events=history"
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?period1=1787748512&period2=1789562912&interval=1d&events=history"
     },
     "^VIX": {
       "series": "^VIX",
       "date": "2026-09-16",
-      "value": 16.799999237060547,
-      "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1787748168&period2=1789562568&interval=1d&events=history"
+      "value": 16.81999969482422,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1787748512&period2=1789562912&interval=1d&events=history"
     },
     "TIP": {
       "series": "TIP",
       "date": "2026-09-15",
       "value": 105.79000091552734,
-      "source": "https://query1.finance.yahoo.com/v8/finance/chart/TIP?period1=1787748168&period2=1789562568&interval=1d&events=history"
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/TIP?period1=1787748512&period2=1789562912&interval=1d&events=history"
     }
   },
   "fundamentals": {
@@ -54,12 +54,12 @@
     "quarter": "2026-Q2"
   },
   "calibration": {
-    "generated_at_utc": "2026-09-16T12:42:42.885012+00:00",
+    "generated_at_utc": "2026-09-16T12:48:29.995069+00:00",
     "model": "gold-weekly-benchmark-aware-ridge-v3",
     "frequency": "weekly",
     "forecast_horizon_weeks": 1,
     "target": "GC=F",
-    "target_source": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1262304000&period2=1789562554&interval=1wk&events=history&includeAdjustedClose=true",
+    "target_source": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1262304000&period2=1789562901&interval=1wk&events=history&includeAdjustedClose=true",
     "series": [
       "LAG_GOLD_LOG",
       "DX-Y.NYB",
@@ -68,19 +68,19 @@
       "TIP"
     ],
     "predictor_sources": {
-      "LAG_GOLD_LOG": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1262304000&period2=1789562554&interval=1wk&events=history&includeAdjustedClose=true",
-      "DX-Y.NYB": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1262304000&period2=1789562554&interval=1wk&events=history&includeAdjustedClose=true",
-      "^TNX": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?period1=1262304000&period2=1789562554&interval=1wk&events=history&includeAdjustedClose=true",
-      "^VIX": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1262304000&period2=1789562554&interval=1wk&events=history&includeAdjustedClose=true",
-      "TIP": "https://query1.finance.yahoo.com/v8/finance/chart/TIP?period1=1262304000&period2=1789562554&interval=1wk&events=history&includeAdjustedClose=true"
+      "LAG_GOLD_LOG": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1262304000&period2=1789562901&interval=1wk&events=history&includeAdjustedClose=true",
+      "DX-Y.NYB": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1262304000&period2=1789562901&interval=1wk&events=history&includeAdjustedClose=true",
+      "^TNX": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?period1=1262304000&period2=1789562901&interval=1wk&events=history&includeAdjustedClose=true",
+      "^VIX": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1262304000&period2=1789562901&interval=1wk&events=history&includeAdjustedClose=true",
+      "TIP": "https://query1.finance.yahoo.com/v8/finance/chart/TIP?period1=1262304000&period2=1789562901&interval=1wk&events=history&includeAdjustedClose=true"
     },
     "beta": [
-      7.4171580117691605,
-      0.3534647895486869,
-      0.001204390797260053,
-      0.0014540618310599327,
-      0.0015861036176562041,
-      -0.000772001142424398
+      7.417157330359693,
+      0.3534623446115779,
+      0.0012048600644207037,
+      0.0014548975882812622,
+      0.0015864024542699996,
+      -0.0007705927882947992
     ],
     "means": [
       7.415605091323581,
@@ -133,10 +133,10 @@
       "r2": 0.9919,
       "mape_pct": 1.945,
       "accuracy_pct": 98.055,
-      "rmse_usd_oz": 91.396,
+      "rmse_usd_oz": 91.399,
       "naive_mape_pct": 1.945,
       "naive_accuracy_pct": 98.055,
-      "naive_rmse_usd_oz": 91.396,
+      "naive_rmse_usd_oz": 91.399,
       "skill_vs_naive_mse_pct": 0.0,
       "direction_accuracy_pct": 40.0,
       "n_weeks_total": 871,
@@ -149,9 +149,9 @@
     "publication_status": "REFERENCE_ONLY",
     "live": {
       "as_of_week": "2026-09-10",
-      "anchor_usd_oz": 4382.2002,
-      "raw_model_fair_value_usd_oz": 4395.8509,
-      "fair_value_usd_oz": 4382.2002,
+      "anchor_usd_oz": 4379.6001,
+      "raw_model_fair_value_usd_oz": 4393.2603,
+      "fair_value_usd_oz": 4379.6001,
       "predicted_return_pct": 0.0
     },
     "rules": {
@@ -170,7 +170,7 @@
       "equilibrium_claim_rule": "Near-term forecast cannot by itself validate structural equilibrium; every structural/physical overlay needs separate OOS validation."
     },
     "strict_validation": {
-      "generated_at_utc": "2026-09-16T12:42:44.798722+00:00",
+      "generated_at_utc": "2026-09-16T12:48:32.104845+00:00",
       "checks": {
         "nonzero_model_weight": false,
         "min_mse_skill": false,
@@ -239,109 +239,180 @@
     "uncertainty": {
       "method": "empirical final-OOS log errors",
       "candidate_80": [
-        4264.3781,
-        4521.2247
+        4261.8479,
+        4518.5421
       ],
       "candidate_95": [
-        4204.0752,
-        4613.7059
+        4201.5808,
+        4610.9684
       ],
       "persistence_80": [
-        4264.3781,
-        4521.2247
+        4261.8479,
+        4518.5421
       ],
       "persistence_95": [
-        4204.0752,
-        4613.7059
+        4201.5808,
+        4610.9684
       ]
     }
   },
   "fundamentals_calibration": {
-    "generated_at_utc": "2026-09-14T10:59:41.423434+00:00",
-    "model": "wgc-quarterly-physical-overlay-ridge-v1",
+    "generated_at_utc": "2026-09-16T12:48:00.265986+00:00",
+    "model": "wgc-quarterly-physical-overlay-ridge-v2-research",
     "frequency": "quarterly",
-    "feature_period": "quarter q fundamentals",
-    "target": "average COMEX GC=F price in q+1 versus q",
-    "features": [
-      "strategic_demand_share",
-      "recycling_share",
-      "producer_hedging_share"
-    ],
-    "beta": [
-      0.025178460745674668,
-      0.026961108053445534,
-      -0.00431873016721974,
-      0.010519179463163683
-    ],
-    "means": [
-      0.4279016214362164,
-      0.26373812644906863,
-      -0.008304423510038586
-    ],
-    "sds": [
-      0.11897470209381032,
-      0.019013833584591012,
-      0.010230882658342787
-    ],
-    "ridge_lambda": 1.5,
-    "metrics": {
-      "wgc_quarters_exact": 29,
-      "walk_forward_n": 17,
-      "walk_forward_start_feature_period": "2021-Q1",
-      "walk_forward_end_feature_period": "2026-Q2",
-      "price_r2": 0.9233,
-      "price_mape_pct": 5.727,
-      "naive_mape_pct": 5.566,
-      "rmse_usd_oz": 263.99,
-      "skill_vs_naive_mse_pct": -17.68,
-      "direction_accuracy_pct": 64.71
-    },
+    "publication_status": "RESEARCH_ONLY",
+    "promotion_eligible": false,
     "walk_forward_gate": "FAIL",
-    "publication_status": "PROVISIONAL",
+    "statistical_research_gate": "NOT_RUN_INSUFFICIENT_EXACT_DATA",
+    "physical_price_validation_gate": "NOT_AVAILABLE_POINT_IN_TIME_VINTAGES",
+    "metrics": {
+      "wgc_quarters_exact": 5,
+      "walk_forward_n": 0
+    },
     "coverage": {
       "first": "2017-Q1",
       "last": "2026-Q2",
-      "period_count": 29,
-      "q4_policy": "excluded when quarterly table is ambiguous in full-year reports",
-      "failed_period_count": 0,
-      "failed_periods": []
+      "period_count": 5,
+      "required_minimum_for_training": 13,
+      "failed_period_count": 24,
+      "failed_periods": [
+        {
+          "period": "2018-Q1",
+          "reason": "missing Total Bar and Coin Demand"
+        },
+        {
+          "period": "2018-Q2",
+          "reason": "missing Total Bar and Coin Demand"
+        },
+        {
+          "period": "2018-Q3",
+          "reason": "missing Total Bar and Coin Demand"
+        },
+        {
+          "period": "2019-Q1",
+          "reason": "missing Total Bar and Coin Demand"
+        },
+        {
+          "period": "2019-Q2",
+          "reason": "missing Total Bar and Coin Demand"
+        },
+        {
+          "period": "2019-Q3",
+          "reason": "missing Total Bar and Coin Demand"
+        },
+        {
+          "period": "2020-Q1",
+          "reason": "missing Total Bar and Coin Demand"
+        },
+        {
+          "period": "2020-Q2",
+          "reason": "missing Total Bar and Coin Demand"
+        },
+        {
+          "period": "2020-Q3",
+          "reason": "missing Total Bar and Coin Demand"
+        },
+        {
+          "period": "2021-Q1",
+          "reason": "missing Total Bar and Coin Demand"
+        },
+        {
+          "period": "2021-Q2",
+          "reason": "missing Total Bar and Coin Demand"
+        },
+        {
+          "period": "2021-Q3",
+          "reason": "missing Total Bar and Coin Demand"
+        },
+        {
+          "period": "2022-Q1",
+          "reason": "missing Total Bar and Coin Demand"
+        },
+        {
+          "period": "2022-Q2",
+          "reason": "missing Total Bar and Coin Demand"
+        },
+        {
+          "period": "2022-Q3",
+          "reason": "missing Total Bar and Coin Demand"
+        },
+        {
+          "period": "2023-Q1",
+          "reason": "missing Total Bar and Coin Demand"
+        },
+        {
+          "period": "2023-Q2",
+          "reason": "missing Total Bar and Coin Demand"
+        },
+        {
+          "period": "2023-Q3",
+          "reason": "missing Total Bar and Coin Demand"
+        },
+        {
+          "period": "2024-Q1",
+          "reason": "missing Total Bar and Coin Demand"
+        },
+        {
+          "period": "2024-Q2",
+          "reason": "missing Total Bar and Coin Demand"
+        },
+        {
+          "period": "2024-Q3",
+          "reason": "missing Total Bar and Coin Demand"
+        },
+        {
+          "period": "2025-Q1",
+          "reason": "missing Total Bar and Coin Demand"
+        },
+        {
+          "period": "2025-Q2",
+          "reason": "missing Total Bar and Coin Demand"
+        },
+        {
+          "period": "2025-Q3",
+          "reason": "missing Total Bar and Coin Demand"
+        }
+      ]
     },
+    "promotion_blocker": "INSUFFICIENT_EXACT_POINT_IN_TIME_DATA: only 5 exact usable WGC quarters; at least 13 are required before training. No interpolation or imputation is allowed. Historical release/vintage mapping is also incomplete.",
     "sources": {
-      "fundamentals": "World Gold Council public Gold Demand Trends quarterly report section tables"
+      "fundamentals": "World Gold Council public Gold Demand Trends quarterly report section tables",
+      "gold_price": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1451606400&period2=1789649280&interval=1wk&events=history&includeAdjustedClose=true"
     },
     "rules": {
-      "publication_lag": "features from q predict q+1; no same-quarter WGC look-ahead",
+      "publication_lag": "features from q may predict q+1 only after verified original release date",
       "missing_data": "exact observations only; no interpolation or imputation",
       "min_training_quarters": 12,
-      "min_oos_quarters": 12,
-      "max_price_mape_pct": 12.0,
-      "min_direction_accuracy_pct": 45.0,
-      "min_skill_vs_naive_mse_pct": -10.0,
-      "copyright": "historical WGC row-level data are not republished; only model coefficients, metrics and coverage metadata are stored"
+      "min_oos_quarters": 20,
+      "min_mse_skill_pct": 2.0,
+      "min_relative_mape_improvement_pct": 1.0,
+      "min_direction_accuracy_pct": 52.5,
+      "no_price_clipping": true,
+      "failed_layer_price_weight": 0.0
     }
   },
   "model": {
-    "weekly_fair_value_usd_oz": 4382.2,
-    "macro_fair_value_usd_oz": 4382.2,
+    "weekly_fair_value_usd_oz": 4379.6,
+    "macro_fair_value_usd_oz": 4379.6,
     "physical_overlay": {
       "strategic_demand_share": 0.434392,
       "recycling_share": 0.256994,
       "producer_hedging_share": -0.017968,
-      "predicted_next_quarter_return_pct": 1.841228,
-      "raw_multiplier": 1.018412,
-      "diagnostic_multiplier": 1.018412,
+      "predicted_next_quarter_return_pct": 0.0,
+      "raw_multiplier": 1.0,
+      "diagnostic_multiplier": 1.0,
       "effective_multiplier": 1.0,
       "multiplier": 1.0,
       "applied_to_pstar": false,
       "guardrail_active": false,
       "status": "DIAGNOSTIC_ONLY_UNVALIDATED_PRICE_EFFECT",
       "walk_forward_gate": "FAIL",
-      "physical_price_validation_gate": "NOT_AVAILABLE"
+      "physical_price_validation_gate": "NOT_AVAILABLE_POINT_IN_TIME_VINTAGES"
     },
-    "fundamental_p_star_usd_oz": 4382.2,
-    "raw_combined_p_star_usd_oz": 4462.89,
-    "applied_combined_p_star_usd_oz": 4382.2,
-    "market_vs_pstar_pct": -0.86,
+    "fundamental_p_star_usd_oz": 4379.6,
+    "raw_combined_p_star_usd_oz": 4379.6,
+    "applied_combined_p_star_usd_oz": 4379.6,
+    "market_vs_pstar_pct": -0.8,
     "guardrail_active": false,
     "status": "REFERENCE_ONLY",
     "confidence": "LOW",
@@ -356,7 +427,7 @@
       "weekly_walk_forward": "PASS",
       "benchmark_gate": "FAIL",
       "fundamentals_historical_calibration": "FAIL",
-      "physical_price_validation_gate": "NOT_AVAILABLE",
+      "physical_price_validation_gate": "NOT_AVAILABLE_POINT_IN_TIME_VINTAGES",
       "fundamental_overlay_applied": false,
       "failed_layers_have_zero_price_weight": true,
       "no_imputation": true,

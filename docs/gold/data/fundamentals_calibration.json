@@ -1,64 +1,135 @@
 {
-  "generated_at_utc": "2026-09-14T10:59:41.423434+00:00",
-  "model": "wgc-quarterly-physical-overlay-ridge-v1",
+  "generated_at_utc": "2026-09-16T12:48:00.265986+00:00",
+  "model": "wgc-quarterly-physical-overlay-ridge-v2-research",
   "frequency": "quarterly",
-  "feature_period": "quarter q fundamentals",
-  "target": "average COMEX GC=F price in q+1 versus q",
-  "features": [
-    "strategic_demand_share",
-    "recycling_share",
-    "producer_hedging_share"
-  ],
-  "beta": [
-    0.025178460745674668,
-    0.026961108053445534,
-    -0.00431873016721974,
-    0.010519179463163683
-  ],
-  "means": [
-    0.4279016214362164,
-    0.26373812644906863,
-    -0.008304423510038586
-  ],
-  "sds": [
-    0.11897470209381032,
-    0.019013833584591012,
-    0.010230882658342787
-  ],
-  "ridge_lambda": 1.5,
-  "metrics": {
-    "wgc_quarters_exact": 29,
-    "walk_forward_n": 17,
-    "walk_forward_start_feature_period": "2021-Q1",
-    "walk_forward_end_feature_period": "2026-Q2",
-    "price_r2": 0.9233,
-    "price_mape_pct": 5.727,
-    "naive_mape_pct": 5.566,
-    "rmse_usd_oz": 263.99,
-    "skill_vs_naive_mse_pct": -17.68,
-    "direction_accuracy_pct": 64.71
-  },
+  "publication_status": "RESEARCH_ONLY",
+  "promotion_eligible": false,
   "walk_forward_gate": "FAIL",
-  "publication_status": "PROVISIONAL",
+  "statistical_research_gate": "NOT_RUN_INSUFFICIENT_EXACT_DATA",
+  "physical_price_validation_gate": "NOT_AVAILABLE_POINT_IN_TIME_VINTAGES",
+  "metrics": {
+    "wgc_quarters_exact": 5,
+    "walk_forward_n": 0
+  },
   "coverage": {
     "first": "2017-Q1",
     "last": "2026-Q2",
-    "period_count": 29,
-    "q4_policy": "excluded when quarterly table is ambiguous in full-year reports",
-    "failed_period_count": 0,
-    "failed_periods": []
+    "period_count": 5,
+    "required_minimum_for_training": 13,
+    "failed_period_count": 24,
+    "failed_periods": [
+      {
+        "period": "2018-Q1",
+        "reason": "missing Total Bar and Coin Demand"
+      },
+      {
+        "period": "2018-Q2",
+        "reason": "missing Total Bar and Coin Demand"
+      },
+      {
+        "period": "2018-Q3",
+        "reason": "missing Total Bar and Coin Demand"
+      },
+      {
+        "period": "2019-Q1",
+        "reason": "missing Total Bar and Coin Demand"
+      },
+      {
+        "period": "2019-Q2",
+        "reason": "missing Total Bar and Coin Demand"
+      },
+      {
+        "period": "2019-Q3",
+        "reason": "missing Total Bar and Coin Demand"
+      },
+      {
+        "period": "2020-Q1",
+        "reason": "missing Total Bar and Coin Demand"
+      },
+      {
+        "period": "2020-Q2",
+        "reason": "missing Total Bar and Coin Demand"
+      },
+      {
+        "period": "2020-Q3",
+        "reason": "missing Total Bar and Coin Demand"
+      },
+      {
+        "period": "2021-Q1",
+        "reason": "missing Total Bar and Coin Demand"
+      },
+      {
+        "period": "2021-Q2",
+        "reason": "missing Total Bar and Coin Demand"
+      },
+      {
+        "period": "2021-Q3",
+        "reason": "missing Total Bar and Coin Demand"
+      },
+      {
+        "period": "2022-Q1",
+        "reason": "missing Total Bar and Coin Demand"
+      },
+      {
+        "period": "2022-Q2",
+        "reason": "missing Total Bar and Coin Demand"
+      },
+      {
+        "period": "2022-Q3",
+        "reason": "missing Total Bar and Coin Demand"
+      },
+      {
+        "period": "2023-Q1",
+        "reason": "missing Total Bar and Coin Demand"
+      },
+      {
+        "period": "2023-Q2",
+        "reason": "missing Total Bar and Coin Demand"
+      },
+      {
+        "period": "2023-Q3",
+        "reason": "missing Total Bar and Coin Demand"
+      },
+      {
+        "period": "2024-Q1",
+        "reason": "missing Total Bar and Coin Demand"
+      },
+      {
+        "period": "2024-Q2",
+        "reason": "missing Total Bar and Coin Demand"
+      },
+      {
+        "period": "2024-Q3",
+        "reason": "missing Total Bar and Coin Demand"
+      },
+      {
+        "period": "2025-Q1",
+        "reason": "missing Total Bar and Coin Demand"
+      },
+      {
+        "period": "2025-Q2",
+        "reason": "missing Total Bar and Coin Demand"
+      },
+      {
+        "period": "2025-Q3",
+        "reason": "missing Total Bar and Coin Demand"
+      }
+    ]
   },
+  "promotion_blocker": "INSUFFICIENT_EXACT_POINT_IN_TIME_DATA: only 5 exact usable WGC quarters; at least 13 are required before training. No interpolation or imputation is allowed. Historical release/vintage mapping is also incomplete.",
   "sources": {
-    "fundamentals": "World Gold Council public Gold Demand Trends quarterly report section tables"
+    "fundamentals": "World Gold Council public Gold Demand Trends quarterly report section tables",
+    "gold_price": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1451606400&period2=1789649280&interval=1wk&events=history&includeAdjustedClose=true"
   },
   "rules": {
-    "publication_lag": "features from q predict q+1; no same-quarter WGC look-ahead",
+    "publication_lag": "features from q may predict q+1 only after verified original release date",
     "missing_data": "exact observations only; no interpolation or imputation",
     "min_training_quarters": 12,
-    "min_oos_quarters": 12,
-    "max_price_mape_pct": 12.0,
-    "min_direction_accuracy_pct": 45.0,
-    "min_skill_vs_naive_mse_pct": -10.0,
-    "copyright": "historical WGC row-level data are not republished; only model coefficients, metrics and coverage metadata are stored"
+    "min_oos_quarters": 20,
+    "min_mse_skill_pct": 2.0,
+    "min_relative_mape_improvement_pct": 1.0,
+    "min_direction_accuracy_pct": 52.5,
+    "no_price_clipping": true,
+    "failed_layer_price_weight": 0.0
   }
 }
