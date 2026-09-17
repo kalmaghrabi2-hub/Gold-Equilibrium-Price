@@ -9,13 +9,17 @@ ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "docs/gold/data/cyclical_research.json"
 TARGET = "GC=F"
 FRED = ["DFII10", "DTWEXBGS", "VIXCLS", "T10YIE"]
+MARKET_FACTORS = ["SI=F", "HG=F", "CL=F", "DX-Y.NYB", "^TNX", "^VIX"]
 FEATURE_SETS = [
     ["RET1", "D_DFII10", "D_DTWEXBGS", "D_VIXCLS", "D_T10YIE"],
     ["RET1", "RET4", "D_DFII10", "D_DTWEXBGS", "D_VIXCLS", "D_T10YIE"],
     ["RET1", "RET4", "DFII10", "DTWEXBGS", "VIXCLS", "T10YIE", "D_DFII10", "D_DTWEXBGS"],
+    ["RET1", "RET2", "RET4", "RET13", "RET26", "RET52", "VOL13", "POS13",
+     "R_SI=F", "R_HG=F", "R_CL=F", "R_DX-Y.NYB", "R_^TNX", "R_^VIX",
+     "DFII10", "D_DFII10", "DTWEXBGS", "D_DTWEXBGS", "VIXCLS", "D_VIXCLS", "T10YIE", "D_T10YIE"],
 ]
-LAMBDAS = [0.5, 2.0, 10.0, 50.0]
-WEIGHTS = [0.25, 0.50, 0.75, 1.0]
+LAMBDAS = [0.5, 2.0, 10.0, 50.0, 200.0]
+WEIGHTS = [0.0, 0.05, 0.10, 0.20, 0.30, 0.50, 0.75, 1.0]
 MIN_TRAIN, VALIDATION_WEEKS, FINAL_OOS_WEEKS = 156, 156, 260
 UA = "Mozilla/5.0 GoldCyclicalResearch/1.0"
 
@@ -54,6 +58,10 @@ def asof(rows, d, max_age=14):
     if i < 0 or (d - dates[i]).days > max_age:
         return None
     return rows[i][1]
+
+
+def market_asof(rows, d, max_age=10):
+    return asof(rows, d, max_age)
 
 
 def solve(a, b):
@@ -121,17 +129,30 @@ def dm(pred, actual, anchor, lag=4):
 
 def main():
     gold, target_url = yahoo(TARGET)
-    frows, sources = {}, {"target": target_url}
+    markets, frows, sources = {}, {}, {"target": target_url}
+    for s in MARKET_FACTORS:
+        markets[s], sources[s] = yahoo(s)
     for s in FRED:
         frows[s], sources[s] = fred(s)
     rows = []
-    for i in range(5, len(gold) - 1):
+    for i in range(53, len(gold) - 1):
         d0, p0 = gold[i]
         d1, p1 = gold[i + 1]
         if (d1 - d0).days > 10:
             continue
-        x = {"RET1": math.log(p0 / gold[i - 1][1]), "RET4": math.log(p0 / gold[i - 4][1])}
+        x = {f"RET{k}": math.log(p0 / gold[i-k][1]) for k in (1, 2, 4, 13, 26, 52)}
+        recent = [math.log(gold[j][1] / gold[j-1][1]) for j in range(i-12, i+1)]
+        x["VOL13"] = statistics.pstdev(recent)
+        x["POS13"] = sum(v > 0 for v in recent) / len(recent)
         ok = True
+        for s in MARKET_FACTORS:
+            v0, vm = market_asof(markets[s], d0), market_asof(markets[s], gold[i - 1][0])
+            if v0 is None or vm is None or min(v0, vm) <= 0:
+                ok = False
+                break
+            x["R_" + s] = math.log(v0 / vm)
+        if not ok:
+            continue
         for s in FRED:
             v0, vm = asof(frows[s], d0), asof(frows[s], gold[i - 1][0])
             if v0 is None or vm is None:
@@ -172,7 +193,7 @@ def main():
         windows.append({"window": k + 1, "mse_skill_pct": mm["mse_skill_pct"], "positive": mm["mse_skill_pct"] > 0})
     checks = {"nonzero_model_weight": weight > 0, "min_mse_skill": m["mse_skill_pct"] >= 2.0, "min_relative_mape_improvement": m["relative_mape_improvement_pct"] >= 1.0, "dm_significance": dm_p <= 0.05, "regime_stability": sum(x["positive"] for x in windows) >= 4, "directional_information": m["direction_accuracy_pct"] >= 52.5}
     statistical_pass = all(checks.values())
-    payload = {"generated_at_utc": datetime.now(timezone.utc).isoformat(), "model": "gold-cyclical-return-ridge-research-v1", "status": "RESEARCH_ONLY", "promotion_eligible": False, "promotion_blocker": "Historical FRED CSV is current-vintage. ALFRED point-in-time vintages or a sufficiently long committed forward archive are required before publication promotion.", "data_sources": sources, "selected": {"features": features, "ridge_lambda": lam, "model_weight": weight, "validation_metrics": validation_metrics}, "final_oos": {"start": dates[0], "end": dates[-1], "n": len(pred), **m, "dm_stat": dm_stat, "dm_one_sided_p_value": dm_p, "positive_52w_windows": sum(x["positive"] for x in windows), "windows": windows, "checks": checks, "statistical_gate": "PASS" if statistical_pass else "FAIL"}, "policy": {"final_oos_untouched": True, "selection_window_weeks": VALIDATION_WEEKS, "final_oos_weeks": FINAL_OOS_WEEKS, "no_price_clipping": True, "current_published_price_unchanged": True}}
+    payload = {"generated_at_utc": datetime.now(timezone.utc).isoformat(), "model": "gold-cyclical-multifactor-ridge-research-v2", "status": "RESEARCH_ONLY", "promotion_eligible": False, "promotion_blocker": "Historical FRED CSV is current-vintage and the strict statistical gate must pass. ALFRED point-in-time vintages or a sufficiently long committed forward archive are required before publication promotion.", "data_sources": sources, "selected": {"features": features, "ridge_lambda": lam, "model_weight": weight, "validation_metrics": validation_metrics}, "final_oos": {"start": dates[0], "end": dates[-1], "n": len(pred), **m, "fit_score_100_minus_mape_pct": 100-m["mape_pct"], "naive_fit_score_100_minus_mape_pct": 100-m["naive_mape_pct"], "dm_stat": dm_stat, "dm_one_sided_p_value": dm_p, "positive_52w_windows": sum(x["positive"] for x in windows), "windows": windows, "checks": checks, "statistical_gate": "PASS" if statistical_pass else "FAIL"}, "policy": {"final_oos_untouched": True, "selection_window_weeks": VALIDATION_WEEKS, "final_oos_weeks": FINAL_OOS_WEEKS, "no_price_clipping": True, "current_published_price_unchanged": True, "zero_weight_candidate_allowed": True}}
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(payload, ensure_ascii=False, indent=2))
