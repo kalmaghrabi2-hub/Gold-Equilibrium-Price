@@ -1,10 +1,10 @@
 {
-  "as_of_date": "2026-09-19",
-  "generated_at_utc": "2026-09-19T23:15:07.125255+00:00",
+  "as_of_date": "2026-09-20",
+  "generated_at_utc": "2026-09-20T23:19:29.794772+00:00",
   "model_version": "gold-benchmark-aware-v3.2-no-clipping",
   "market": {
-    "usd_oz": 4379.0,
-    "as_of": "2026-09-19T23:14:38.546Z",
+    "usd_oz": 4374.0,
+    "as_of": "2026-09-20T23:19:08.405Z",
     "freshness_status": "fresh",
     "provider": "XAUS",
     "source": "https://xaus.com/api/v1/spot"
@@ -12,27 +12,27 @@
   "macro": {
     "DX-Y.NYB": {
       "series": "DX-Y.NYB",
-      "date": "2026-09-18",
-      "value": 100.22000122070312,
-      "source": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1788045307&period2=1789859707&interval=1d&events=history"
+      "date": "2026-09-20",
+      "value": 100.2760009765625,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1788131970&period2=1789946370&interval=1d&events=history"
     },
     "^TNX": {
       "series": "^TNX",
       "date": "2026-09-18",
       "value": 4.998000144958496,
-      "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?period1=1788045307&period2=1789859707&interval=1d&events=history"
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?period1=1788131970&period2=1789946370&interval=1d&events=history"
     },
     "^VIX": {
       "series": "^VIX",
       "date": "2026-09-18",
       "value": 14.8100004196167,
-      "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1788045307&period2=1789859707&interval=1d&events=history"
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1788131970&period2=1789946370&interval=1d&events=history"
     },
     "TIP": {
       "series": "TIP",
       "date": "2026-09-18",
       "value": 105.2699966430664,
-      "source": "https://query1.finance.yahoo.com/v8/finance/chart/TIP?period1=1788045307&period2=1789859707&interval=1d&events=history"
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/TIP?period1=1788131970&period2=1789946370&interval=1d&events=history"
     }
   },
   "fundamentals": {
@@ -54,12 +54,12 @@
     "quarter": "2026-Q2"
   },
   "calibration": {
-    "generated_at_utc": "2026-09-19T23:15:04.668505+00:00",
+    "generated_at_utc": "2026-09-20T23:19:27.188674+00:00",
     "model": "gold-weekly-benchmark-aware-ridge-v3",
     "frequency": "weekly",
     "forecast_horizon_weeks": 1,
     "target": "GC=F",
-    "target_source": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1262304000&period2=1789859698&interval=1wk&events=history&includeAdjustedClose=true",
+    "target_source": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1262304000&period2=1789946357&interval=1wk&events=history&includeAdjustedClose=true",
     "series": [
       "LAG_GOLD_LOG",
       "DX-Y.NYB",
@@ -68,19 +68,19 @@
       "TIP"
     ],
     "predictor_sources": {
-      "LAG_GOLD_LOG": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1262304000&period2=1789859698&interval=1wk&events=history&includeAdjustedClose=true",
-      "DX-Y.NYB": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1262304000&period2=1789859699&interval=1wk&events=history&includeAdjustedClose=true",
-      "^TNX": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?period1=1262304000&period2=1789859699&interval=1wk&events=history&includeAdjustedClose=true",
-      "^VIX": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1262304000&period2=1789859699&interval=1wk&events=history&includeAdjustedClose=true",
-      "TIP": "https://query1.finance.yahoo.com/v8/finance/chart/TIP?period1=1262304000&period2=1789859700&interval=1wk&events=history&includeAdjustedClose=true"
+      "LAG_GOLD_LOG": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1262304000&period2=1789946357&interval=1wk&events=history&includeAdjustedClose=true",
+      "DX-Y.NYB": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1262304000&period2=1789946358&interval=1wk&events=history&includeAdjustedClose=true",
+      "^TNX": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?period1=1262304000&period2=1789946358&interval=1wk&events=history&includeAdjustedClose=true",
+      "^VIX": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1262304000&period2=1789946358&interval=1wk&events=history&includeAdjustedClose=true",
+      "TIP": "https://query1.finance.yahoo.com/v8/finance/chart/TIP?period1=1262304000&period2=1789946358&interval=1wk&events=history&includeAdjustedClose=true"
     },
     "beta": [
-      7.4182839640623826,
-      0.35481048937759785,
-      0.0011998092855934513,
-      0.001451054115847573,
-      0.0015814667232190473,
-      -0.0007858710675121404
+      7.418280355993412,
+      0.35479583550137467,
+      0.0012018329313320743,
+      0.0014591445543485036,
+      0.0015847103266143044,
+      -0.0007755935521854837
     ],
     "means": [
       7.416721704384168,
@@ -131,12 +131,12 @@
     "metrics": {
       "n": 260,
       "r2": 0.992,
-      "mape_pct": 1.944,
-      "accuracy_pct": 98.056,
-      "rmse_usd_oz": 91.396,
-      "naive_mape_pct": 1.944,
-      "naive_accuracy_pct": 98.056,
-      "naive_rmse_usd_oz": 91.396,
+      "mape_pct": 1.942,
+      "accuracy_pct": 98.058,
+      "rmse_usd_oz": 91.386,
+      "naive_mape_pct": 1.942,
+      "naive_accuracy_pct": 98.058,
+      "naive_rmse_usd_oz": 91.386,
       "skill_vs_naive_mse_pct": 0.0,
       "direction_accuracy_pct": 40.0,
       "n_weeks_total": 872,
@@ -149,9 +149,9 @@
     "publication_status": "REFERENCE_ONLY",
     "live": {
       "as_of_week": "2026-09-17",
-      "anchor_usd_oz": 4424.8999,
-      "raw_model_fair_value_usd_oz": 4437.5568,
-      "fair_value_usd_oz": 4424.8999,
+      "anchor_usd_oz": 4411.0,
+      "raw_model_fair_value_usd_oz": 4423.5145,
+      "fair_value_usd_oz": 4411.0,
       "predicted_return_pct": 0.0
     },
     "rules": {
@@ -170,7 +170,7 @@
       "equilibrium_claim_rule": "Near-term forecast cannot by itself validate structural equilibrium; every structural/physical overlay needs separate OOS validation."
     },
     "strict_validation": {
-      "generated_at_utc": "2026-09-19T23:15:07.076790+00:00",
+      "generated_at_utc": "2026-09-20T23:19:29.707895+00:00",
       "checks": {
         "nonzero_model_weight": false,
         "min_mse_skill": false,
@@ -239,25 +239,25 @@
     "uncertainty": {
       "method": "empirical final-OOS log errors",
       "candidate_80": [
-        4305.9297,
-        4565.279
+        4292.4036,
+        4550.9381
       ],
       "candidate_95": [
-        4245.0393,
-        4658.6613
+        4231.7044,
+        4644.0271
       ],
       "persistence_80": [
-        4305.9297,
-        4565.279
+        4292.4036,
+        4550.9381
       ],
       "persistence_95": [
-        4245.0393,
-        4658.6613
+        4231.7044,
+        4644.0271
       ]
     }
   },
   "fundamentals_calibration": {
-    "generated_at_utc": "2026-09-19T23:14:29.391539+00:00",
+    "generated_at_utc": "2026-09-20T23:19:04.996687+00:00",
     "model": "wgc-quarterly-physical-overlay-ridge-v2-research",
     "frequency": "quarterly",
     "publication_status": "RESEARCH_ONLY",
@@ -266,31 +266,43 @@
     "statistical_research_gate": "NOT_RUN_INSUFFICIENT_EXACT_DATA",
     "physical_price_validation_gate": "NOT_AVAILABLE_POINT_IN_TIME_VINTAGES",
     "metrics": {
-      "wgc_quarters_exact": 5,
+      "wgc_quarters_exact": 2,
       "walk_forward_n": 0
     },
     "coverage": {
-      "first": "2017-Q1",
+      "first": "2026-Q1",
       "last": "2026-Q2",
-      "period_count": 5,
+      "period_count": 2,
       "required_minimum_for_training": 13,
-      "failed_period_count": 24,
+      "failed_period_count": 27,
       "failed_periods": [
         {
+          "period": "2017-Q1",
+          "reason": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "period": "2017-Q2",
+          "reason": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "period": "2017-Q3",
+          "reason": "HTTP Error 503: Service Unavailable"
+        },
+        {
           "period": "2018-Q1",
-          "reason": "missing Total Bar and Coin Demand"
+          "reason": "HTTP Error 503: Service Unavailable"
         },
         {
           "period": "2018-Q2",
-          "reason": "missing Total Bar and Coin Demand"
+          "reason": "HTTP Error 503: Service Unavailable"
         },
         {
           "period": "2018-Q3",
-          "reason": "missing Total Bar and Coin Demand"
+          "reason": "HTTP Error 503: Service Unavailable"
         },
         {
           "period": "2019-Q1",
-          "reason": "missing Total Bar and Coin Demand"
+          "reason": "HTTP Error 503: Service Unavailable"
         },
         {
           "period": "2019-Q2",
@@ -298,47 +310,47 @@
         },
         {
           "period": "2019-Q3",
-          "reason": "missing Total Bar and Coin Demand"
+          "reason": "HTTP Error 503: Service Unavailable"
         },
         {
           "period": "2020-Q1",
-          "reason": "missing Total Bar and Coin Demand"
+          "reason": "HTTP Error 503: Service Unavailable"
         },
         {
           "period": "2020-Q2",
-          "reason": "missing Total Bar and Coin Demand"
+          "reason": "HTTP Error 503: Service Unavailable"
         },
         {
           "period": "2020-Q3",
-          "reason": "missing Total Bar and Coin Demand"
+          "reason": "HTTP Error 503: Service Unavailable"
         },
         {
           "period": "2021-Q1",
-          "reason": "missing Total Bar and Coin Demand"
+          "reason": "HTTP Error 503: Service Unavailable"
         },
         {
           "period": "2021-Q2",
-          "reason": "missing Total Bar and Coin Demand"
+          "reason": "HTTP Error 503: Service Unavailable"
         },
         {
           "period": "2021-Q3",
-          "reason": "missing Total Bar and Coin Demand"
+          "reason": "HTTP Error 503: Service Unavailable"
         },
         {
           "period": "2022-Q1",
-          "reason": "missing Total Bar and Coin Demand"
+          "reason": "HTTP Error 503: Service Unavailable"
         },
         {
           "period": "2022-Q2",
-          "reason": "missing Total Bar and Coin Demand"
+          "reason": "HTTP Error 503: Service Unavailable"
         },
         {
           "period": "2022-Q3",
-          "reason": "missing Total Bar and Coin Demand"
+          "reason": "HTTP Error 503: Service Unavailable"
         },
         {
           "period": "2023-Q1",
-          "reason": "missing Total Bar and Coin Demand"
+          "reason": "HTTP Error 503: Service Unavailable"
         },
         {
           "period": "2023-Q2",
@@ -346,7 +358,7 @@
         },
         {
           "period": "2023-Q3",
-          "reason": "missing Total Bar and Coin Demand"
+          "reason": "HTTP Error 503: Service Unavailable"
         },
         {
           "period": "2024-Q1",
@@ -358,15 +370,15 @@
         },
         {
           "period": "2024-Q3",
-          "reason": "missing Total Bar and Coin Demand"
+          "reason": "HTTP Error 503: Service Unavailable"
         },
         {
           "period": "2025-Q1",
-          "reason": "missing Total Bar and Coin Demand"
+          "reason": "HTTP Error 503: Service Unavailable"
         },
         {
           "period": "2025-Q2",
-          "reason": "missing Total Bar and Coin Demand"
+          "reason": "HTTP Error 503: Service Unavailable"
         },
         {
           "period": "2025-Q3",
@@ -374,10 +386,10 @@
         }
       ]
     },
-    "promotion_blocker": "INSUFFICIENT_EXACT_POINT_IN_TIME_DATA: only 5 exact usable WGC quarters; at least 13 are required before training. No interpolation or imputation is allowed. Historical release/vintage mapping is also incomplete.",
+    "promotion_blocker": "INSUFFICIENT_EXACT_POINT_IN_TIME_DATA: only 2 exact usable WGC quarters; at least 13 are required before training. No interpolation or imputation is allowed. Historical release/vintage mapping is also incomplete.",
     "sources": {
       "fundamentals": "World Gold Council public Gold Demand Trends quarterly report section tables",
-      "gold_price": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1451606400&period2=1789946069&interval=1wk&events=history&includeAdjustedClose=true"
+      "gold_price": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1451606400&period2=1790032744&interval=1wk&events=history&includeAdjustedClose=true"
     },
     "rules": {
       "publication_lag": "features from q may predict q+1 only after verified original release date",
@@ -392,8 +404,8 @@
     }
   },
   "model": {
-    "weekly_fair_value_usd_oz": 4424.9,
-    "macro_fair_value_usd_oz": 4424.9,
+    "weekly_fair_value_usd_oz": 4411.0,
+    "macro_fair_value_usd_oz": 4411.0,
     "physical_overlay": {
       "strategic_demand_share": 0.434392,
       "recycling_share": 0.256994,
@@ -409,18 +421,18 @@
       "walk_forward_gate": "FAIL",
       "physical_price_validation_gate": "NOT_AVAILABLE_POINT_IN_TIME_VINTAGES"
     },
-    "fundamental_p_star_usd_oz": 4424.9,
-    "raw_combined_p_star_usd_oz": 4424.9,
-    "applied_combined_p_star_usd_oz": 4424.9,
-    "market_vs_pstar_pct": -1.04,
+    "fundamental_p_star_usd_oz": 4411.0,
+    "raw_combined_p_star_usd_oz": 4411.0,
+    "applied_combined_p_star_usd_oz": 4411.0,
+    "market_vs_pstar_pct": -0.84,
     "guardrail_active": false,
     "status": "REFERENCE_ONLY",
     "confidence": "LOW",
     "accuracy": {
-      "oos_fit_score_100_minus_mape_pct": 98.056,
-      "mape_pct": 1.944,
-      "candidate_fit_score_pct": 98.056,
-      "naive_fit_score_pct": 98.056,
+      "oos_fit_score_100_minus_mape_pct": 98.058,
+      "mape_pct": 1.942,
+      "candidate_fit_score_pct": 98.058,
+      "naive_fit_score_pct": 98.058,
       "definition": "100 - MAPE on effective published reference; descriptive fit score, not probability or proof of equilibrium."
     },
     "governance": {

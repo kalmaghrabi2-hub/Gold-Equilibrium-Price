@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-19T23:14:29.391539+00:00",
+  "generated_at_utc": "2026-09-20T23:19:04.996687+00:00",
   "model": "wgc-quarterly-physical-overlay-ridge-v2-research",
   "frequency": "quarterly",
   "publication_status": "RESEARCH_ONLY",
@@ -8,31 +8,43 @@
   "statistical_research_gate": "NOT_RUN_INSUFFICIENT_EXACT_DATA",
   "physical_price_validation_gate": "NOT_AVAILABLE_POINT_IN_TIME_VINTAGES",
   "metrics": {
-    "wgc_quarters_exact": 5,
+    "wgc_quarters_exact": 2,
     "walk_forward_n": 0
   },
   "coverage": {
-    "first": "2017-Q1",
+    "first": "2026-Q1",
     "last": "2026-Q2",
-    "period_count": 5,
+    "period_count": 2,
     "required_minimum_for_training": 13,
-    "failed_period_count": 24,
+    "failed_period_count": 27,
     "failed_periods": [
       {
+        "period": "2017-Q1",
+        "reason": "HTTP Error 503: Service Unavailable"
+      },
+      {
+        "period": "2017-Q2",
+        "reason": "HTTP Error 503: Service Unavailable"
+      },
+      {
+        "period": "2017-Q3",
+        "reason": "HTTP Error 503: Service Unavailable"
+      },
+      {
         "period": "2018-Q1",
-        "reason": "missing Total Bar and Coin Demand"
+        "reason": "HTTP Error 503: Service Unavailable"
       },
       {
         "period": "2018-Q2",
-        "reason": "missing Total Bar and Coin Demand"
+        "reason": "HTTP Error 503: Service Unavailable"
       },
       {
         "period": "2018-Q3",
-        "reason": "missing Total Bar and Coin Demand"
+        "reason": "HTTP Error 503: Service Unavailable"
       },
       {
         "period": "2019-Q1",
-        "reason": "missing Total Bar and Coin Demand"
+        "reason": "HTTP Error 503: Service Unavailable"
       },
       {
         "period": "2019-Q2",
@@ -40,47 +52,47 @@
       },
       {
         "period": "2019-Q3",
-        "reason": "missing Total Bar and Coin Demand"
+        "reason": "HTTP Error 503: Service Unavailable"
       },
       {
         "period": "2020-Q1",
-        "reason": "missing Total Bar and Coin Demand"
+        "reason": "HTTP Error 503: Service Unavailable"
       },
       {
         "period": "2020-Q2",
-        "reason": "missing Total Bar and Coin Demand"
+        "reason": "HTTP Error 503: Service Unavailable"
       },
       {
         "period": "2020-Q3",
-        "reason": "missing Total Bar and Coin Demand"
+        "reason": "HTTP Error 503: Service Unavailable"
       },
       {
         "period": "2021-Q1",
-        "reason": "missing Total Bar and Coin Demand"
+        "reason": "HTTP Error 503: Service Unavailable"
       },
       {
         "period": "2021-Q2",
-        "reason": "missing Total Bar and Coin Demand"
+        "reason": "HTTP Error 503: Service Unavailable"
       },
       {
         "period": "2021-Q3",
-        "reason": "missing Total Bar and Coin Demand"
+        "reason": "HTTP Error 503: Service Unavailable"
       },
       {
         "period": "2022-Q1",
-        "reason": "missing Total Bar and Coin Demand"
+        "reason": "HTTP Error 503: Service Unavailable"
       },
       {
         "period": "2022-Q2",
-        "reason": "missing Total Bar and Coin Demand"
+        "reason": "HTTP Error 503: Service Unavailable"
       },
       {
         "period": "2022-Q3",
-        "reason": "missing Total Bar and Coin Demand"
+        "reason": "HTTP Error 503: Service Unavailable"
       },
       {
         "period": "2023-Q1",
-        "reason": "missing Total Bar and Coin Demand"
+        "reason": "HTTP Error 503: Service Unavailable"
       },
       {
         "period": "2023-Q2",
@@ -88,7 +100,7 @@
       },
       {
         "period": "2023-Q3",
-        "reason": "missing Total Bar and Coin Demand"
+        "reason": "HTTP Error 503: Service Unavailable"
       },
       {
         "period": "2024-Q1",
@@ -100,15 +112,15 @@
       },
       {
         "period": "2024-Q3",
-        "reason": "missing Total Bar and Coin Demand"
+        "reason": "HTTP Error 503: Service Unavailable"
       },
       {
         "period": "2025-Q1",
-        "reason": "missing Total Bar and Coin Demand"
+        "reason": "HTTP Error 503: Service Unavailable"
       },
       {
         "period": "2025-Q2",
-        "reason": "missing Total Bar and Coin Demand"
+        "reason": "HTTP Error 503: Service Unavailable"
       },
       {
         "period": "2025-Q3",
@@ -116,10 +128,10 @@
       }
     ]
   },
-  "promotion_blocker": "INSUFFICIENT_EXACT_POINT_IN_TIME_DATA: only 5 exact usable WGC quarters; at least 13 are required before training. No interpolation or imputation is allowed. Historical release/vintage mapping is also incomplete.",
+  "promotion_blocker": "INSUFFICIENT_EXACT_POINT_IN_TIME_DATA: only 2 exact usable WGC quarters; at least 13 are required before training. No interpolation or imputation is allowed. Historical release/vintage mapping is also incomplete.",
   "sources": {
     "fundamentals": "World Gold Council public Gold Demand Trends quarterly report section tables",
-    "gold_price": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1451606400&period2=1789946069&interval=1wk&events=history&includeAdjustedClose=true"
+    "gold_price": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1451606400&period2=1790032744&interval=1wk&events=history&includeAdjustedClose=true"
   },
   "rules": {
     "publication_lag": "features from q may predict q+1 only after verified original release date",
