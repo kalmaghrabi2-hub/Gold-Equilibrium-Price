@@ -1,10 +1,10 @@
 {
-  "generated_at_utc": "2026-09-20T23:19:27.188674+00:00",
+  "generated_at_utc": "2026-09-22T00:12:02.162854+00:00",
   "model": "gold-weekly-benchmark-aware-ridge-v3",
   "frequency": "weekly",
   "forecast_horizon_weeks": 1,
   "target": "GC=F",
-  "target_source": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1262304000&period2=1789946357&interval=1wk&events=history&includeAdjustedClose=true",
+  "target_source": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1262304000&period2=1790035914&interval=1wk&events=history&includeAdjustedClose=true",
   "series": [
     "LAG_GOLD_LOG",
     "DX-Y.NYB",
@@ -13,19 +13,19 @@
     "TIP"
   ],
   "predictor_sources": {
-    "LAG_GOLD_LOG": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1262304000&period2=1789946357&interval=1wk&events=history&includeAdjustedClose=true",
-    "DX-Y.NYB": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1262304000&period2=1789946358&interval=1wk&events=history&includeAdjustedClose=true",
-    "^TNX": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?period1=1262304000&period2=1789946358&interval=1wk&events=history&includeAdjustedClose=true",
-    "^VIX": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1262304000&period2=1789946358&interval=1wk&events=history&includeAdjustedClose=true",
-    "TIP": "https://query1.finance.yahoo.com/v8/finance/chart/TIP?period1=1262304000&period2=1789946358&interval=1wk&events=history&includeAdjustedClose=true"
+    "LAG_GOLD_LOG": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1262304000&period2=1790035914&interval=1wk&events=history&includeAdjustedClose=true",
+    "DX-Y.NYB": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1262304000&period2=1790035914&interval=1wk&events=history&includeAdjustedClose=true",
+    "^TNX": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?period1=1262304000&period2=1790035915&interval=1wk&events=history&includeAdjustedClose=true",
+    "^VIX": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1262304000&period2=1790035915&interval=1wk&events=history&includeAdjustedClose=true",
+    "TIP": "https://query1.finance.yahoo.com/v8/finance/chart/TIP?period1=1262304000&period2=1790035915&interval=1wk&events=history&includeAdjustedClose=true"
   },
   "beta": [
-    7.418280355993412,
-    0.35479583550137467,
-    0.0012018329313320743,
-    0.0014591445543485036,
-    0.0015847103266143044,
-    -0.0007755935521854837
+    7.418279549734571,
+    0.35479256094721173,
+    0.001202285135068293,
+    0.0014609524431738361,
+    0.0015854351420036992,
+    -0.0007732969393245487
   ],
   "means": [
     7.416721704384168,
@@ -78,10 +78,10 @@
     "r2": 0.992,
     "mape_pct": 1.942,
     "accuracy_pct": 98.058,
-    "rmse_usd_oz": 91.386,
+    "rmse_usd_oz": 91.384,
     "naive_mape_pct": 1.942,
     "naive_accuracy_pct": 98.058,
-    "naive_rmse_usd_oz": 91.386,
+    "naive_rmse_usd_oz": 91.384,
     "skill_vs_naive_mse_pct": 0.0,
     "direction_accuracy_pct": 40.0,
     "n_weeks_total": 872,
@@ -94,9 +94,9 @@
   "publication_status": "REFERENCE_ONLY",
   "live": {
     "as_of_week": "2026-09-17",
-    "anchor_usd_oz": 4411.0,
-    "raw_model_fair_value_usd_oz": 4423.5145,
-    "fair_value_usd_oz": 4411.0,
+    "anchor_usd_oz": 4407.8999,
+    "raw_model_fair_value_usd_oz": 4420.0773,
+    "fair_value_usd_oz": 4407.8999,
     "predicted_return_pct": 0.0
   },
   "rules": {
@@ -115,7 +115,7 @@
     "equilibrium_claim_rule": "Near-term forecast cannot by itself validate structural equilibrium; every structural/physical overlay needs separate OOS validation."
   },
   "strict_validation": {
-    "generated_at_utc": "2026-09-20T23:19:29.707895+00:00",
+    "generated_at_utc": "2026-09-22T00:12:04.260127+00:00",
     "checks": {
       "nonzero_model_weight": false,
       "min_mse_skill": false,
@@ -184,20 +184,20 @@
   "uncertainty": {
     "method": "empirical final-OOS log errors",
     "candidate_80": [
-      4292.4036,
-      4550.9381
+      4289.3868,
+      4547.7397
     ],
     "candidate_95": [
-      4231.7044,
-      4644.0271
+      4228.7303,
+      4640.7632
     ],
     "persistence_80": [
-      4292.4036,
-      4550.9381
+      4289.3868,
+      4547.7397
     ],
     "persistence_95": [
-      4231.7044,
-      4644.0271
+      4228.7303,
+      4640.7632
     ]
   }
 }
