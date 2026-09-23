@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-22T23:38:36.440703+00:00",
+  "generated_at_utc": "2026-09-23T23:47:47.019045+00:00",
   "model": "wgc-quarterly-physical-overlay-ridge-v2-research",
   "frequency": "quarterly",
   "publication_status": "RESEARCH_ONLY",
@@ -56,7 +56,7 @@
       },
       {
         "period": "2021-Q1",
-        "reason": "The read operation timed out"
+        "reason": "missing Total Bar and Coin Demand"
       },
       {
         "period": "2021-Q2",
@@ -119,7 +119,7 @@
   "promotion_blocker": "INSUFFICIENT_EXACT_POINT_IN_TIME_DATA: only 5 exact usable WGC quarters; at least 13 are required before training. No interpolation or imputation is allowed. Historical release/vintage mapping is also incomplete.",
   "sources": {
     "fundamentals": "World Gold Council public Gold Demand Trends quarterly report section tables",
-    "gold_price": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1451606400&period2=1790206716&interval=1wk&events=history&includeAdjustedClose=true"
+    "gold_price": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1451606400&period2=1790293667&interval=1wk&events=history&includeAdjustedClose=true"
   },
   "rules": {
     "publication_lag": "features from q may predict q+1 only after verified original release date",
