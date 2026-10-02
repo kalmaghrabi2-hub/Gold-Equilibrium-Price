@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-01T00:36:40.449284+00:00",
+  "generated_at_utc": "2026-10-02T00:53:32.701466+00:00",
   "status": "PASS",
   "purpose": "institutional research inputs; not authorized to change published equilibrium/reference price",
   "point_in_time_policy": {
@@ -12,8 +12,8 @@
       "id": "DFII10",
       "source": "Federal Reserve/FRED",
       "role": "real yield / monetary opportunity cost",
-      "observation_date": "2026-09-29",
-      "value": 2.91,
+      "observation_date": "2026-09-30",
+      "value": 2.93,
       "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII10"
     },
     "broad_usd": {
@@ -28,15 +28,15 @@
       "id": "VIXCLS",
       "source": "CBOE via FRED",
       "role": "risk regime",
-      "observation_date": "2026-09-29",
-      "value": 16.04,
+      "observation_date": "2026-09-30",
+      "value": 16.34,
       "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=VIXCLS"
     },
     "breakeven_10y": {
       "id": "T10YIE",
       "source": "FRED",
       "role": "inflation expectations",
-      "observation_date": "2026-09-30",
+      "observation_date": "2026-10-01",
       "value": 2.36,
       "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=T10YIE"
     },
@@ -44,8 +44,8 @@
       "id": "DGS10",
       "source": "Federal Reserve/FRED",
       "role": "nominal rate control",
-      "observation_date": "2026-09-29",
-      "value": 5.26,
+      "observation_date": "2026-09-30",
+      "value": 5.29,
       "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10"
     }
   },
