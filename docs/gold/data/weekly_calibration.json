@@ -1,10 +1,10 @@
 {
-  "generated_at_utc": "2026-11-01T00:13:55.065190+00:00",
+  "generated_at_utc": "2026-11-03T02:58:34.720914+00:00",
   "model": "gold-weekly-benchmark-aware-ridge-v3",
   "frequency": "weekly",
   "forecast_horizon_weeks": 1,
   "target": "GC=F",
-  "target_source": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1262304000&period2=1793492029&interval=1wk&events=history&includeAdjustedClose=true",
+  "target_source": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1262304000&period2=1793674705&interval=1wk&events=history&includeAdjustedClose=true",
   "series": [
     "LAG_GOLD_LOG",
     "DX-Y.NYB",
@@ -13,19 +13,19 @@
     "TIP"
   ],
   "predictor_sources": {
-    "LAG_GOLD_LOG": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1262304000&period2=1793492029&interval=1wk&events=history&includeAdjustedClose=true",
-    "DX-Y.NYB": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1262304000&period2=1793492029&interval=1wk&events=history&includeAdjustedClose=true",
-    "^TNX": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?period1=1262304000&period2=1793492030&interval=1wk&events=history&includeAdjustedClose=true",
-    "^VIX": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1262304000&period2=1793492030&interval=1wk&events=history&includeAdjustedClose=true",
-    "TIP": "https://query1.finance.yahoo.com/v8/finance/chart/TIP?period1=1262304000&period2=1793492030&interval=1wk&events=history&includeAdjustedClose=true"
+    "LAG_GOLD_LOG": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1262304000&period2=1793674705&interval=1wk&events=history&includeAdjustedClose=true",
+    "DX-Y.NYB": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1262304000&period2=1793674705&interval=1wk&events=history&includeAdjustedClose=true",
+    "^TNX": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?period1=1262304000&period2=1793674705&interval=1wk&events=history&includeAdjustedClose=true",
+    "^VIX": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1262304000&period2=1793674705&interval=1wk&events=history&includeAdjustedClose=true",
+    "TIP": "https://query1.finance.yahoo.com/v8/finance/chart/TIP?period1=1262304000&period2=1793674706&interval=1wk&events=history&includeAdjustedClose=true"
   },
   "beta": [
-    7.424379847055913,
-    0.36095232238536534,
-    0.0012576154792721787,
-    0.0016419723423792654,
-    0.0016690564863046076,
-    -0.00046985713535221843
+    7.424396521382995,
+    0.36098986522857024,
+    0.001254789972902904,
+    0.0016485009679375166,
+    0.0016644829275108029,
+    -0.0004810310474574674
   ],
   "means": [
     7.422972401476003,
@@ -76,12 +76,12 @@
   "metrics": {
     "n": 260,
     "r2": 0.992,
-    "mape_pct": 1.958,
-    "accuracy_pct": 98.042,
-    "rmse_usd_oz": 92.324,
-    "naive_mape_pct": 1.958,
-    "naive_accuracy_pct": 98.042,
-    "naive_rmse_usd_oz": 92.324,
+    "mape_pct": 1.952,
+    "accuracy_pct": 98.048,
+    "rmse_usd_oz": 92.075,
+    "naive_mape_pct": 1.952,
+    "naive_accuracy_pct": 98.048,
+    "naive_rmse_usd_oz": 92.075,
     "skill_vs_naive_mse_pct": 0.0,
     "direction_accuracy_pct": 41.54,
     "n_weeks_total": 878,
@@ -94,9 +94,9 @@
   "publication_status": "REFERENCE_ONLY",
   "live": {
     "as_of_week": "2026-10-29",
-    "anchor_usd_oz": 3898.8999,
-    "raw_model_fair_value_usd_oz": 3910.2298,
-    "fair_value_usd_oz": 3898.8999,
+    "anchor_usd_oz": 3956.3999,
+    "raw_model_fair_value_usd_oz": 3969.6777,
+    "fair_value_usd_oz": 3956.3999,
     "predicted_return_pct": 0.0
   },
   "rules": {
@@ -115,7 +115,7 @@
     "equilibrium_claim_rule": "Near-term forecast cannot by itself validate structural equilibrium; every structural/physical overlay needs separate OOS validation."
   },
   "strict_validation": {
-    "generated_at_utc": "2026-11-01T00:13:56.871212+00:00",
+    "generated_at_utc": "2026-11-03T02:58:36.749153+00:00",
     "checks": {
       "nonzero_model_weight": false,
       "min_mse_skill": false,
@@ -184,20 +184,20 @@
   "uncertainty": {
     "method": "empirical final-OOS log errors",
     "candidate_80": [
-      3793.2287,
-      4022.21
+      3850.0261,
+      4081.5285
     ],
     "candidate_95": [
-      3740.4198,
-      4104.8735
+      3795.5826,
+      4165.4111
     ],
     "persistence_80": [
-      3793.2287,
-      4022.21
+      3850.0261,
+      4081.5285
     ],
     "persistence_95": [
-      3740.4198,
-      4104.8735
+      3795.5826,
+      4165.4111
     ]
   }
 }
