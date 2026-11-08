@@ -1,10 +1,10 @@
 {
-  "as_of_date": "2026-11-07",
-  "generated_at_utc": "2026-11-07T01:00:10.010526+00:00",
+  "as_of_date": "2026-11-08",
+  "generated_at_utc": "2026-11-08T00:47:11.916020+00:00",
   "model_version": "gold-benchmark-aware-v3.2-no-clipping",
   "market": {
     "usd_oz": 4072.100098,
-    "as_of": "2026-11-07T00:59:16.979Z",
+    "as_of": "2026-11-08T00:46:08.450Z",
     "freshness_status": "fresh",
     "provider": "XAUS",
     "source": "https://xaus.com/api/v1/spot"
@@ -13,26 +13,26 @@
     "DX-Y.NYB": {
       "series": "DX-Y.NYB",
       "date": "2026-11-06",
-      "value": 102.27899932861328,
-      "source": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1792198810&period2=1794013210&interval=1d&events=history"
+      "value": 102.30000305175781,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1792284432&period2=1794098832&interval=1d&events=history"
     },
     "^TNX": {
       "series": "^TNX",
       "date": "2026-11-06",
       "value": 4.859000205993652,
-      "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?period1=1792198810&period2=1794013210&interval=1d&events=history"
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?period1=1792284432&period2=1794098832&interval=1d&events=history"
     },
     "^VIX": {
       "series": "^VIX",
       "date": "2026-11-06",
       "value": 25.639999389648438,
-      "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1792198810&period2=1794013210&interval=1d&events=history"
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1792284432&period2=1794098832&interval=1d&events=history"
     },
     "TIP": {
       "series": "TIP",
-      "date": "2026-11-05",
-      "value": 106.26000213623047,
-      "source": "https://query1.finance.yahoo.com/v8/finance/chart/TIP?period1=1792198810&period2=1794013210&interval=1d&events=history"
+      "date": "2026-11-06",
+      "value": 106.2699966430664,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/TIP?period1=1792284432&period2=1794098832&interval=1d&events=history"
     }
   },
   "fundamentals": {
@@ -54,12 +54,12 @@
     "quarter": "2026-Q2"
   },
   "calibration": {
-    "generated_at_utc": "2026-11-07T01:00:07.385960+00:00",
+    "generated_at_utc": "2026-11-08T00:47:10.276759+00:00",
     "model": "gold-weekly-benchmark-aware-ridge-v3",
     "frequency": "weekly",
     "forecast_horizon_weeks": 1,
     "target": "GC=F",
-    "target_source": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1262304000&period2=1794013197&interval=1wk&events=history&includeAdjustedClose=true",
+    "target_source": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1262304000&period2=1794098824&interval=1wk&events=history&includeAdjustedClose=true",
     "series": [
       "LAG_GOLD_LOG",
       "DX-Y.NYB",
@@ -68,19 +68,19 @@
       "TIP"
     ],
     "predictor_sources": {
-      "LAG_GOLD_LOG": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1262304000&period2=1794013197&interval=1wk&events=history&includeAdjustedClose=true",
-      "DX-Y.NYB": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1262304000&period2=1794013198&interval=1wk&events=history&includeAdjustedClose=true",
-      "^TNX": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?period1=1262304000&period2=1794013198&interval=1wk&events=history&includeAdjustedClose=true",
-      "^VIX": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1262304000&period2=1794013198&interval=1wk&events=history&includeAdjustedClose=true",
-      "TIP": "https://query1.finance.yahoo.com/v8/finance/chart/TIP?period1=1262304000&period2=1794013198&interval=1wk&events=history&includeAdjustedClose=true"
+      "LAG_GOLD_LOG": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1262304000&period2=1794098824&interval=1wk&events=history&includeAdjustedClose=true",
+      "DX-Y.NYB": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1262304000&period2=1794098825&interval=1wk&events=history&includeAdjustedClose=true",
+      "^TNX": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?period1=1262304000&period2=1794098825&interval=1wk&events=history&includeAdjustedClose=true",
+      "^VIX": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1262304000&period2=1794098825&interval=1wk&events=history&includeAdjustedClose=true",
+      "TIP": "https://query1.finance.yahoo.com/v8/finance/chart/TIP?period1=1262304000&period2=1794098825&interval=1wk&events=history&includeAdjustedClose=true"
     },
     "beta": [
-      7.4254525770609385,
-      0.3621074010126014,
-      0.0012511539249264122,
-      0.001669054395233378,
-      0.0016329474070175566,
-      -0.0004914632779601563
+      7.425451293500827,
+      0.36210469472486223,
+      0.0012514443770233169,
+      0.0016686047161467755,
+      0.00163116303512055,
+      -0.0004901848959023245
     ],
     "means": [
       7.423995219593333,
@@ -131,12 +131,12 @@
     "metrics": {
       "n": 260,
       "r2": 0.992,
-      "mape_pct": 1.955,
-      "accuracy_pct": 98.045,
-      "rmse_usd_oz": 92.122,
-      "naive_mape_pct": 1.955,
-      "naive_accuracy_pct": 98.045,
-      "naive_rmse_usd_oz": 92.122,
+      "mape_pct": 1.956,
+      "accuracy_pct": 98.044,
+      "rmse_usd_oz": 92.129,
+      "naive_mape_pct": 1.956,
+      "naive_accuracy_pct": 98.044,
+      "naive_rmse_usd_oz": 92.129,
       "skill_vs_naive_mse_pct": 0.0,
       "direction_accuracy_pct": 41.15,
       "n_weeks_total": 879,
@@ -149,9 +149,9 @@
     "publication_status": "REFERENCE_ONLY",
     "live": {
       "as_of_week": "2026-11-05",
-      "anchor_usd_oz": 4079.5,
-      "raw_model_fair_value_usd_oz": 4097.9969,
-      "fair_value_usd_oz": 4079.5,
+      "anchor_usd_oz": 4074.8999,
+      "raw_model_fair_value_usd_oz": 4093.3587,
+      "fair_value_usd_oz": 4074.8999,
       "predicted_return_pct": 0.0
     },
     "rules": {
@@ -170,7 +170,7 @@
       "equilibrium_claim_rule": "Near-term forecast cannot by itself validate structural equilibrium; every structural/physical overlay needs separate OOS validation."
     },
     "strict_validation": {
-      "generated_at_utc": "2026-11-07T01:00:09.930390+00:00",
+      "generated_at_utc": "2026-11-08T00:47:11.866036+00:00",
       "checks": {
         "nonzero_model_weight": false,
         "min_mse_skill": false,
@@ -203,32 +203,32 @@
         "positive_52w_windows": 0,
         "windows": [
           {
-            "start": "2021-11-11",
-            "end": "2022-11-03",
+            "start": "2021-11-18",
+            "end": "2022-11-10",
             "skill_mse_pct": 0.0,
             "positive": false
           },
           {
-            "start": "2022-11-10",
-            "end": "2023-11-02",
+            "start": "2022-11-17",
+            "end": "2023-11-09",
             "skill_mse_pct": 0.0,
             "positive": false
           },
           {
-            "start": "2023-11-09",
-            "end": "2024-10-31",
+            "start": "2023-11-16",
+            "end": "2024-11-07",
             "skill_mse_pct": 0.0,
             "positive": false
           },
           {
-            "start": "2024-11-07",
-            "end": "2025-10-30",
+            "start": "2024-11-14",
+            "end": "2025-11-06",
             "skill_mse_pct": 0.0,
             "positive": false
           },
           {
-            "start": "2025-11-06",
-            "end": "2026-10-29",
+            "start": "2025-11-13",
+            "end": "2026-11-05",
             "skill_mse_pct": 0.0,
             "positive": false
           }
@@ -239,25 +239,25 @@
     "uncertainty": {
       "method": "empirical final-OOS log errors",
       "candidate_80": [
-        3969.8164,
-        4208.5219
+        3965.34,
+        4203.7763
       ],
       "candidate_95": [
-        3913.679,
-        4295.0144
+        3909.2659,
+        4290.1713
       ],
       "persistence_80": [
-        3969.8164,
-        4208.5219
+        3965.34,
+        4203.7763
       ],
       "persistence_95": [
-        3913.679,
-        4295.0144
+        3909.2659,
+        4290.1713
       ]
     }
   },
   "fundamentals_calibration": {
-    "generated_at_utc": "2026-11-07T00:59:36.629295+00:00",
+    "generated_at_utc": "2026-11-08T00:46:35.621162+00:00",
     "model": "wgc-quarterly-physical-overlay-ridge-v2-research",
     "frequency": "quarterly",
     "publication_status": "RESEARCH_ONLY",
@@ -381,7 +381,7 @@
     "promotion_blocker": "INSUFFICIENT_EXACT_POINT_IN_TIME_DATA: only 5 exact usable WGC quarters; at least 13 are required before training. No interpolation or imputation is allowed. Historical release/vintage mapping is also incomplete.",
     "sources": {
       "fundamentals": "World Gold Council public Gold Demand Trends quarterly report section tables",
-      "gold_price": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1451606400&period2=1794099576&interval=1wk&events=history&includeAdjustedClose=true"
+      "gold_price": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1451606400&period2=1794185195&interval=1wk&events=history&includeAdjustedClose=true"
     },
     "rules": {
       "publication_lag": "features from q may predict q+1 only after verified original release date",
@@ -396,8 +396,8 @@
     }
   },
   "model": {
-    "weekly_fair_value_usd_oz": 4079.5,
-    "macro_fair_value_usd_oz": 4079.5,
+    "weekly_fair_value_usd_oz": 4074.9,
+    "macro_fair_value_usd_oz": 4074.9,
     "physical_overlay": {
       "strategic_demand_share": 0.434392,
       "recycling_share": 0.256994,
@@ -413,18 +413,18 @@
       "walk_forward_gate": "FAIL",
       "physical_price_validation_gate": "NOT_AVAILABLE_POINT_IN_TIME_VINTAGES"
     },
-    "fundamental_p_star_usd_oz": 4079.5,
-    "raw_combined_p_star_usd_oz": 4079.5,
-    "applied_combined_p_star_usd_oz": 4079.5,
-    "market_vs_pstar_pct": -0.18,
+    "fundamental_p_star_usd_oz": 4074.9,
+    "raw_combined_p_star_usd_oz": 4074.9,
+    "applied_combined_p_star_usd_oz": 4074.9,
+    "market_vs_pstar_pct": -0.07,
     "guardrail_active": false,
     "status": "REFERENCE_ONLY",
     "confidence": "LOW",
     "accuracy": {
-      "oos_fit_score_100_minus_mape_pct": 98.045,
-      "mape_pct": 1.955,
-      "candidate_fit_score_pct": 98.045,
-      "naive_fit_score_pct": 98.045,
+      "oos_fit_score_100_minus_mape_pct": 98.044,
+      "mape_pct": 1.956,
+      "candidate_fit_score_pct": 98.044,
+      "naive_fit_score_pct": 98.044,
       "definition": "100 - MAPE on effective published reference; descriptive fit score, not probability or proof of equilibrium."
     },
     "governance": {
