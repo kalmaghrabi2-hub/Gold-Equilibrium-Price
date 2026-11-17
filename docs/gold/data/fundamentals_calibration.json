@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-15T01:07:34.029792+00:00",
+  "generated_at_utc": "2026-11-17T03:59:52.636300+00:00",
   "model": "wgc-quarterly-physical-overlay-ridge-v2-research",
   "frequency": "quarterly",
   "publication_status": "RESEARCH_ONLY",
@@ -8,15 +8,15 @@
   "statistical_research_gate": "NOT_RUN_INSUFFICIENT_EXACT_DATA",
   "physical_price_validation_gate": "NOT_AVAILABLE_POINT_IN_TIME_VINTAGES",
   "metrics": {
-    "wgc_quarters_exact": 5,
+    "wgc_quarters_exact": 6,
     "walk_forward_n": 0
   },
   "coverage": {
     "first": "2017-Q1",
-    "last": "2026-Q2",
-    "period_count": 5,
+    "last": "2026-Q3",
+    "period_count": 6,
     "required_minimum_for_training": 13,
-    "failed_period_count": 25,
+    "failed_period_count": 24,
     "failed_periods": [
       {
         "period": "2018-Q1",
@@ -113,17 +113,13 @@
       {
         "period": "2025-Q3",
         "reason": "missing Total Bar and Coin Demand"
-      },
-      {
-        "period": "2026-Q3",
-        "reason": "gold average unavailable"
       }
     ]
   },
-  "promotion_blocker": "INSUFFICIENT_EXACT_POINT_IN_TIME_DATA: only 5 exact usable WGC quarters; at least 13 are required before training. No interpolation or imputation is allowed. Historical release/vintage mapping is also incomplete.",
+  "promotion_blocker": "INSUFFICIENT_EXACT_POINT_IN_TIME_DATA: only 6 exact usable WGC quarters; at least 13 are required before training. No interpolation or imputation is allowed. Historical release/vintage mapping is also incomplete.",
   "sources": {
     "fundamentals": "World Gold Council public Gold Demand Trends quarterly report section tables",
-    "gold_price": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1451606400&period2=1794791254&interval=1wk&events=history&includeAdjustedClose=true"
+    "gold_price": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1451606400&period2=1794974392&interval=1wk&events=history&includeAdjustedClose=true"
   },
   "rules": {
     "publication_lag": "features from q may predict q+1 only after verified original release date",
